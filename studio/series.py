@@ -306,5 +306,19 @@ if __name__ == "__main__":
             dur = make(spec, sil); add_beat(sil, fin, dur); os.remove(sil); make_cover(fin)
             open(fin[:-4] + ".txt", "w").write(cap_fn(info)); json.dump(info, open(fin[:-4] + ".json", "w"), indent=1)
             print("ok", fin)
+    elif mode == "spec":
+        # python3 studio/series.py spec SPEC_JSON OUT_MP4   (JSON: {"id","series","slides":[...], "caption":"..."})
+        sp = json.load(open(sys.argv[2])); out = sys.argv[3]
+        cols = dict(GOLD=GOLD, INK=INK, RED=RED, GREEN=GREEN, OR=OR, MUTED=MUTED)
+        for sl in sp["slides"]:
+            if "colors" in sl: sl["colors"] = [cols[c] for c in sl["colors"]]
+            if "col" in sl: sl["col"] = cols[sl["col"]]
+        txt = json.dumps(sp["slides"]) + " " + sp.get("caption", "")
+        BAN = ["draftkings", "fanduel", "betmgm", "caesars", "bet365", "espn bet", "parlay", "lock", "guarantee", "tonight's pick", "free pick", "#nbabetting", "#sportsbetting", "bet on", "fade", "tail"]
+        bad = [b for b in BAN if re.search(r"(?<![a-z])" + re.escape(b) + r"(?![a-z])", txt.lower())]
+        if bad: sys.exit("BANNED TERMS in spec: " + ", ".join(bad))
+        if "not betting advice" not in sp.get("caption", "").lower(): sys.exit("caption must say 'Research, not betting advice'")
+        sil = out + ".silent.mp4"; dur = make(sp, sil); add_beat(sil, out, dur); os.remove(sil); make_cover(out)
+        open(out[:-4] + ".txt", "w").write(sp["caption"]); print("ok", out, round(dur, 1))
     else:
         dur = make(VIDEOS[sys.argv[2]], sys.argv[3]); print("done", round(dur, 1))

@@ -25,3 +25,5 @@ TikTok has no automated posting for this account. The daily task writes the fini
 - No sportsbook names, no advice wording
 
 - Every Instagram Reel MUST be posted with cover_url (a settled hook frame as JPEG). Frame 0 is near-black because elements animate in. Covers for the evergreen series live in covers/<name>.jpg; weekly/daily renders write <name>_cover.jpg next to the mp4.
+
+- Evergreen: see EVERGREEN.md (Sunday creator + Mon/Wed/Fri publisher share evergreen/queue.json). Banned terms are enforced by `studio/series.py spec`.
