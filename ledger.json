@@ -1,8 +1,14 @@
 {
   "instagram": {
-    "recap": [],
-    "week_review": ["2026-11-13"],
+    "recap": [
+      "2026-11-13"
+    ],
+    "week_review": [
+      "2026-11-13"
+    ],
     "blowout_report": []
   },
-  "tiktok_ready": {}
+  "tiktok_ready": {
+    "2026-11-13": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-13/recap_2026-11-13.mp4"
+  }
 }
