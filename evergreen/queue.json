@@ -1,1 +1,49 @@
-{"items": [], "topics_used": ["minutes", "blowout_risk", "teammates", "line_move", "matchup", "myth_high_line", "myth_hot_streak"]}
+{
+ "items": [
+  {
+   "date": "2026-11-23",
+   "id": "myth_starters_30",
+   "title": "Myth: Starters always play 30+",
+   "type": "myth",
+   "mp4": "evergreen/myth_starters_30.mp4",
+   "cover": "evergreen/myth_starters_30_cover.jpg",
+   "caption": "evergreen/myth_starters_30.txt",
+   "status": "pending",
+   "media_id": null
+  },
+  {
+   "date": "2026-11-25",
+   "id": "howto_variance",
+   "title": "How to research: one game proves nothing",
+   "type": "howto",
+   "mp4": "evergreen/howto_variance.mp4",
+   "cover": "evergreen/howto_variance_cover.jpg",
+   "caption": "evergreen/howto_variance.txt",
+   "status": "pending",
+   "media_id": null
+  },
+  {
+   "date": "2026-11-27",
+   "id": "stat_minutes_drop_week",
+   "title": "Stat of the week: biggest minutes drop",
+   "type": "stat",
+   "mp4": "evergreen/stat_minutes_drop_week.mp4",
+   "cover": "evergreen/stat_minutes_drop_week_cover.jpg",
+   "caption": "evergreen/stat_minutes_drop_week.txt",
+   "status": "pending",
+   "media_id": null
+  }
+ ],
+ "topics_used": [
+  "minutes",
+  "blowout_risk",
+  "teammates",
+  "line_move",
+  "matchup",
+  "myth_high_line",
+  "myth_hot_streak",
+  "myth_starters_30",
+  "howto_variance",
+  "stat_minutes_drop_week"
+ ]
+}

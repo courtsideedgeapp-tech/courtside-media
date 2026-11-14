@@ -1,0 +1,56 @@
+{
+ "id": "stat_minutes_drop_week",
+ "series": "STAT OF THE WEEK",
+ "endsub": "New research every day.",
+ "slides": [
+  {
+   "kind": "hook",
+   "dur": 3.4,
+   "lines": [
+    "31",
+    "MINUTES?"
+   ],
+   "colors": [
+    "GOLD",
+    "INK"
+   ],
+   "size": 250,
+   "sub": "Biggest minutes drop of the week"
+  },
+  {
+   "kind": "rows",
+   "dur": 6.4,
+   "kick": "JULIAN REESE  -  USUALLY 31 MIN",
+   "rows": [
+    [
+     "NOV 9",
+     "NOP at GSW",
+     "9",
+     "MIN"
+    ],
+    [
+     "NOV 11",
+     "BKN at NOP",
+     "7",
+     "MIN"
+    ],
+    [
+     "NOV 13",
+     "MEM at NOP",
+     "4",
+     "MIN"
+    ]
+   ]
+  },
+  {
+   "kind": "text",
+   "dur": 3.6,
+   "head": "THE TAKEAWAY",
+   "lines": [
+    "Season averages lag.",
+    "Check recent minutes."
+   ]
+  }
+ ],
+ "caption": "🏀 STAT OF THE WEEK: the biggest minutes drop! 📉\n\nJulian Reese usually plays 31 minutes. This week: 9 on Nov 9, 7 on Nov 11, and 4 on Nov 13. ⏱️ Two of those games were blowouts of 34 and 31. Averages lag behind what's happening right now!\n\nThe takeaway: check recent minutes, not just the season average. 🔎\n\nWhich player's minutes have surprised you most? 👇\n\nResearch, not betting advice. Do the homework! 📊\n\n#NBA #NBAStats #BasketballAnalytics #CourtsideEdge #LearnBasketball #StatOfTheWeek #NBAMinutes"
+}

@@ -1,0 +1,54 @@
+{
+ "id": "howto_variance",
+ "series": "HOW TO RESEARCH",
+ "endsub": "New research every day.",
+ "slides": [
+  {
+   "kind": "hook",
+   "dur": 3.4,
+   "lines": [
+    "ONE GAME",
+    "PROVES",
+    "NOTHING"
+   ],
+   "colors": [
+    "GOLD",
+    "INK",
+    "INK"
+   ],
+   "size": 190,
+   "sub": "Why variance matters"
+  },
+  {
+   "kind": "text",
+   "dur": 3.8,
+   "head": "WHY IT MATTERS",
+   "lines": [
+    "Single games swing wildly.",
+    "Look at the range,",
+    "not one result."
+   ]
+  },
+  {
+   "kind": "stat",
+   "dur": 5.6,
+   "kick": "WASHINGTON  -  5 DAYS APART",
+   "name": "POINTS SCORED",
+   "big": "75 TO 140",
+   "bigsub": "NOV 7 at OKC, then NOV 12 vs DET",
+   "lines": [
+    "The 140 came in overtime"
+   ]
+  },
+  {
+   "kind": "text",
+   "dur": 3.4,
+   "head": "THE TAKEAWAY",
+   "lines": [
+    "Zoom out.",
+    "Ask what's typical."
+   ]
+  }
+ ],
+ "caption": "🏀 HOW TO RESEARCH: one game proves nothing! 🎢\n\nWashington scored 75 on Nov 7 at OKC, then 140 on Nov 12 vs DET (that one went to overtime). Same team, five days apart. 🤯 That's variance, and it's why we look at the range instead of a single result.\n\nThe takeaway: zoom out and ask what's typical. 🔎\n\nWhat's the wildest swing you've seen from one team? 👇\n\nResearch, not betting advice. Do the homework! 📊\n\n#NBA #NBAStats #BasketballAnalytics #CourtsideEdge #LearnBasketball #Variance #SampleSize"
+}
