@@ -235,6 +235,13 @@ def render(facts, out_silent):
     p.stdin.close(); p.wait()
     return frame
 
+def make_cover(mp4):
+    # Frame 0 is near-black (elements animate in), so Instagram needs an explicit cover.
+    cov = mp4.rsplit('.', 1)[0] + '_cover.jpg'
+    subprocess.run(['ffmpeg','-loglevel','error','-y','-ss','1.6','-i',mp4,'-frames:v','1','-q:v','2',cov], check=True)
+    return cov
+
+
 def add_beat(silent, out):
     fo = max(0, DUR - 1.5)
     subprocess.check_call(["ffmpeg", "-y", "-loglevel", "error", "-i", silent, "-i", os.path.join(HERE, "beat.wav"), "-filter_complex",
@@ -247,6 +254,7 @@ if __name__ == "__main__":
     facts = load_facts(rec, date); d = facts["date"]
     silent = os.path.join(outdir, f"recap_{d}.silent.mp4"); final = os.path.join(outdir, f"recap_{d}.mp4")
     fr = render(facts, silent); add_beat(silent, final); os.remove(silent)
+    make_cover(final)
     open(os.path.join(outdir, f"recap_{d}.txt"), "w").write(caption(facts))
     json.dump(facts, open(os.path.join(outdir, f"recap_{d}.json"), "w"), indent=1)
     fr(int(13 * FPS)).save(os.path.join(outdir, f"recap_{d}_insight.png"))

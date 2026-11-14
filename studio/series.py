@@ -263,6 +263,13 @@ def spec_blowout_report(recs, end=None):
         dict(kind="text", dur=3.6, head="WHY IT MATTERS", lines=["Big margins cut minutes.", "That changes every prop", "on the board."])])
     return spec, dict(rows=rows, start=a.isoformat(), end=b.isoformat())
 
+def make_cover(mp4):
+    # Frame 0 is near-black (elements animate in), so Instagram needs an explicit cover.
+    cov = mp4.rsplit('.', 1)[0] + '_cover.jpg'
+    subprocess.run(['ffmpeg','-loglevel','error','-y','-ss','1.6','-i',mp4,'-frames:v','1','-q:v','2',cov], check=True)
+    return cov
+
+
 def add_beat(silent, out, dur):
     import subprocess
     fo = max(0, dur - 1.5)
@@ -296,7 +303,7 @@ if __name__ == "__main__":
             spec, info = spec_fn(recs, end)
             if not spec: print("skip", fn, info); continue
             sil = os.path.join(out, fn + ".silent.mp4"); fin = os.path.join(out, f"{fn}_{info.get('end', end)}.mp4")
-            dur = make(spec, sil); add_beat(sil, fin, dur); os.remove(sil)
+            dur = make(spec, sil); add_beat(sil, fin, dur); os.remove(sil); make_cover(fin)
             open(fin[:-4] + ".txt", "w").write(cap_fn(info)); json.dump(info, open(fin[:-4] + ".json", "w"), indent=1)
             print("ok", fin)
     else:

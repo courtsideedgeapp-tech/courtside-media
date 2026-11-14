@@ -23,3 +23,5 @@ TikTok has no automated posting for this account. The daily task writes the fini
 - Record, hits and misses match `data/record.json`
 - Insight uses real numbers from the nightly grade, never invented
 - No sportsbook names, no advice wording
+
+- Every Instagram Reel MUST be posted with cover_url (a settled hook frame as JPEG). Frame 0 is near-black because elements animate in. Covers for the evergreen series live in covers/<name>.jpg; weekly/daily renders write <name>_cover.jpg next to the mp4.
