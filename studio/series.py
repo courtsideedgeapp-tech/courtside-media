@@ -263,7 +263,18 @@ def spec_blowout_report(recs, end=None):
         dict(kind="text", dur=3.6, head="WHY IT MATTERS", lines=["Big margins cut minutes.", "That changes every prop", "on the board."])])
     return spec, dict(rows=rows, start=a.isoformat(), end=b.isoformat())
 
+def stamp_first_frame(mp4):
+    # Frame 0 is near-black (elements animate in), and TikTok/Instagram show frame 0 while a video loads.
+    # Prepend one frame copied from the settled title state (1.6s) so the loading thumbnail is never black.
+    png = mp4.rsplit('.', 1)[0] + '_f0.png'; tmp = mp4.rsplit('.', 1)[0] + '_st.mp4'
+    subprocess.run(['ffmpeg','-loglevel','error','-y','-ss','1.6','-i',mp4,'-frames:v','1',png], check=True)
+    subprocess.run(['ffmpeg','-loglevel','error','-y','-framerate','30','-loop','1','-t','0.034','-i',png,'-i',mp4,
+        '-filter_complex','[0:v]fps=30,format=yuv420p[a];[1:v]format=yuv420p[b];[a][b]concat=n=2:v=1:a=0[v];[1:a]adelay=34|34[au]',
+        '-map','[v]','-map','[au]','-c:v','libx264','-crf','17','-preset','veryfast','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart',tmp], check=True)
+    os.replace(tmp, mp4); os.remove(png)
+
 def make_cover(mp4):
+    stamp_first_frame(mp4)
     # Frame 0 is near-black (elements animate in), so Instagram needs an explicit cover.
     # Take the settled frame at 1.6s, then shift the content down 170px so the logo and
     # headline survive Instagram's 3:4 center crop on the profile grid.

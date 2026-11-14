@@ -30,3 +30,4 @@ TikTok has no automated posting for this account. The daily task writes the fini
 
 - TikTok sounds: rotate, never the same sound within the last 5 posts (see tiktok_sounds.json; log each use). Whole Crew was used for the Nov 13-22 batch, so pick something different from now on.
 - Cover rule: make_cover shifts content down 170px so logo and headline survive Instagram's 3:4 profile-grid crop. Posted Reels keep old covers (Windsor cannot change them).
+- Frame-0 rule: make_cover first calls stamp_first_frame, which prepends one frame from the settled title state so TikTok/Instagram loading thumbnails are never black. Videos made before Nov 14 (already posted or scheduled) lack it.
