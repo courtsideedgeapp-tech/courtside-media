@@ -27,3 +27,5 @@ TikTok has no automated posting for this account. The daily task writes the fini
 - Every Instagram Reel MUST be posted with cover_url (a settled hook frame as JPEG). Frame 0 is near-black because elements animate in. Covers for the evergreen series live in covers/<name>.jpg; weekly/daily renders write <name>_cover.jpg next to the mp4.
 
 - Evergreen: see EVERGREEN.md (Sunday creator + Mon/Wed/Fri publisher share evergreen/queue.json). Banned terms are enforced by `studio/series.py spec`.
+
+- TikTok sounds: rotate, never the same sound within the last 5 posts (see tiktok_sounds.json; log each use). Whole Crew was used for the Nov 13-22 batch, so pick something different from now on.
