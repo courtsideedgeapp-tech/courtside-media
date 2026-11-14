@@ -237,8 +237,14 @@ def render(facts, out_silent):
 
 def make_cover(mp4):
     # Frame 0 is near-black (elements animate in), so Instagram needs an explicit cover.
+    # Take the settled frame at 1.6s, then shift the content down 170px so the logo and
+    # headline survive Instagram's 3:4 center crop on the profile grid.
     cov = mp4.rsplit('.', 1)[0] + '_cover.jpg'
     subprocess.run(['ffmpeg','-loglevel','error','-y','-ss','1.6','-i',mp4,'-frames:v','1','-q:v','2',cov], check=True)
+    from PIL import Image, ImageDraw
+    im = Image.open(cov).convert('RGB'); W, H = im.size
+    out = im.copy(); ImageDraw.Draw(out).rectangle((0, 0, W, 1670), fill=(11, 13, 16))
+    out.paste(im.crop((0, 0, W, 1500)), (0, 170)); out.save(cov, quality=93)
     return cov
 
 

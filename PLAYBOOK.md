@@ -29,3 +29,4 @@ TikTok has no automated posting for this account. The daily task writes the fini
 - Evergreen: see EVERGREEN.md (Sunday creator + Mon/Wed/Fri publisher share evergreen/queue.json). Banned terms are enforced by `studio/series.py spec`.
 
 - TikTok sounds: rotate, never the same sound within the last 5 posts (see tiktok_sounds.json; log each use). Whole Crew was used for the Nov 13-22 batch, so pick something different from now on.
+- Cover rule: make_cover shifts content down 170px so logo and headline survive Instagram's 3:4 profile-grid crop. Posted Reels keep old covers (Windsor cannot change them).
