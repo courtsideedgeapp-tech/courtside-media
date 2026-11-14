@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-13",
+ "hits": 3,
+ "n": 3,
+ "picks": [
+  {
+   "name": "De'Aaron Fox",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 20.5,
+   "final": 8,
+   "mins": 17,
+   "usual": 30,
+   "hit": true,
+   "team": "SAS"
+  },
+  {
+   "name": "Domantas Sabonis",
+   "market": "REB + AST",
+   "side": "OVER",
+   "line": 16.5,
+   "final": 17,
+   "mins": 35,
+   "usual": 34,
+   "hit": true,
+   "team": "SAC"
+  },
+  {
+   "name": "Josh Green",
+   "market": "PTS + REB",
+   "side": "UNDER",
+   "line": 7.5,
+   "final": 2,
+   "mins": 14,
+   "usual": 20,
+   "hit": true,
+   "team": "UTA"
+  }
+ ],
+ "season": [
+  46,
+  23
+ ],
+ "week": [
+  17,
+  4
+ ],
+ "insight": {
+  "kind": "blowout",
+  "margin": 38,
+  "winner": [
+   "SAS",
+   123
+  ],
+  "loser": [
+   "GSW",
+   85
+  ],
+  "player": "De'Aaron Fox",
+  "mins": 17,
+  "usual": 30,
+  "game": "GSW @ SAS"
+ }
+}
