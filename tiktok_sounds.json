@@ -1,4 +1,25 @@
-{"rule": "Rotate. Never reuse the same sound within the last 5 TikTok posts. Pick from TikTok Studio's Sounds search (commercial library): instrumental, beat-driven, hype/trap/lo-fi/cinematic, ~10-30s usable. Volume -5 dB, fade-out 1.5 s. Log every use here.",
+{
+ "rule": "Rotate. Never reuse the same sound within the last 5 TikTok posts. Pick from TikTok Studio's Sounds search (commercial library): instrumental, beat-driven, hype/trap/lo-fi/cinematic, ~10-30s usable. Volume -5 dB, fade-out 1.5 s. Log every use here.",
  "log": [
-  {"sound": "Whole Crew (Dark Wind, 01:00)", "uses": ["recap Nov 13", "week_review Nov 14", "ep1 Nov 15", "ep2 Nov 16", "ep3 Nov 17", "myth_highline Nov 18", "ep4 Nov 19", "ep5 Nov 20", "myth_hotstreak Nov 22"]}
- ]}
+  {
+   "sound": "Whole Crew (Dark Wind, 01:00)",
+   "uses": [
+    "recap Nov 13",
+    "week_review Nov 14",
+    "ep1 Nov 15",
+    "ep2 Nov 16",
+    "ep3 Nov 17",
+    "myth_highline Nov 18",
+    "ep4 Nov 19",
+    "ep5 Nov 20",
+    "myth_hotstreak Nov 22"
+   ]
+  },
+  {
+   "sound": "Dark Trap Beat (Dixon Clark, 01:02)",
+   "uses": [
+    "recap Nov 15"
+   ]
+  }
+ ]
+}
