@@ -2,7 +2,7 @@
 
 Two scheduled tasks share a queue file, `evergreen/queue.json`.
 - CREATOR (Sundays ~6:11 PM ET): tops the queue up to 3 pending videos for the next Mon/Wed/Fri slots.
-- PUBLISHER (Mon/Wed/Fri ~12:31 PM ET): posts the item dated today to Instagram, then marks it posted.
+- PUBLISHER (Mon/Wed/Fri ~12:31 PM ET): posts the item dated today to Instagram AND TikTok, then marks it posted.
 
 Never name sportsbooks. Results-only, framed as research, never advice. No tonight's picks, parlays, locks, or #NBABetting / #SportsBetting. Post only to Instagram account id 17841480704510652 (courtside.edge.app) with the Windsor.ai for Social Media connector. Never print or store secrets. Work without asking questions.
 
@@ -25,8 +25,9 @@ Never name sportsbooks. Results-only, framed as research, never advice. No tonig
 1. Attach the repo (add_repo push) and clone. Read `evergreen/queue.json`. Today = `TZ=America/Toronto date +%F`.
 2. Find the item with date == today and status pending. None: stop with "nothing due".
 3. Verify mp4 and cover URLs return 200. Post: execute_action, connector "instagram", action "create_video_post", account "17841480704510652", params video_url (raw mp4 URL), cover_url (raw cover jpg URL, REQUIRED, never post without it), caption (the .txt file exactly), share_to_feed true.
-4. Set status posted and media_id, commit, push.
-5. Finish with ONE short message: title, media id, and "TikTok-ready: <raw mp4 URL>".
+4. TikTok via the ScheduleNChill connector (ToolSearch "schedulenchill"): get_accounts (tiktok account, currently id 372), get_tiktok_creator_info (can_post must be true), upload_media source "url" = raw mp4 URL (filename = the mp4 name, alt_text = title, folder "evergreen"), schedule_post when "now", account_ids [id], media_ids [media_id], content = the .txt caption exactly, platform_options [{account_id, options:{privacy_level:"PUBLIC_TO_EVERYONE", allow_comment:true, allow_duet:false, allow_stitch:false}}]. After ~60 s get_post must show published; retry_post once if failed. No TikTok sound needed (video has its own beat). A TikTok failure must not undo the Instagram post.
+5. Set status posted, media_id and tiktok_post_id, commit, push.
+6. Finish with ONE short message: title, Instagram media id, TikTok post id and status.
 
 ## Topic bank (pick unused; add more in the same spirit)
 Myths: rest days mean a star sits; home court boosts every stat; back-to-backs always hurt; last game predicts the next; season average is the truth; a big game total lifts everyone; revenge games; starters always play 30+; a hot shooter stays hot; one big game changes a role.

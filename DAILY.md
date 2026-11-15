@@ -1,6 +1,6 @@
 # Daily recap runbook (scheduled task, ~8:23 AM ET)
 
-Goal: post last night's Heat Check results as an Instagram Reel, and stage the TikTok version.
+Goal: post last night's Heat Check results as an Instagram Reel AND as a TikTok (fully automatic, no human step).
 Work without asking questions. Never name sportsbooks. Post only to Instagram account id 17841480704510652 (courtside.edge.app).
 
 1. Get the data. Read `data/record.json` from the Courtside Edge artifact (https://claude.ai/artifact/BjcjLESc4j84Qu8nPBQGZp) with the Artifact tool's read action (load the tool with ToolSearch `select:Artifact` if deferred), saving to a file with out_dir.
@@ -12,5 +12,6 @@ Work without asking questions. Never name sportsbooks. Post only to Instagram ac
 6. Check. Read recap_DATE.json: hits/misses must match the record entry, and look at recap_DATE_results.png. Fix and rerun if anything is wrong.
 7. Publish files. Add posts/DATE/*, commit, `git push origin HEAD:main`. Verify `curl -sI https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/DATE/recap_DATE.mp4` returns 200 (retry for ~2 minutes).
 8. Post to Instagram with the Windsor.ai for Social Media connector (ToolSearch "windsor"): execute_action, connector "instagram", action "create_video_post", account "17841480704510652", params video_url = the raw URL, caption = the contents of recap_DATE.txt exactly, share_to_feed true, cover_url = raw URL of recap_DATE_cover.jpg (same folder; verify it returns 200 too). Never post a Reel without cover_url.
-9. Update ledger.json: append DATE to `instagram.recap`; set `tiktok_ready[DATE]` to the raw video URL. Commit and push.
-10. Finish with ONE short message for the owner: the record (e.g. "3-0, season 46-23"), Instagram media id, and "TikTok-ready: <raw video URL>" (caption is in posts/DATE/recap_DATE.txt). If anything failed, say exactly what.
+9. Post to TikTok with the ScheduleNChill connector (ToolSearch "schedulenchill"). Skip if DATE is in ledger.json `tiktok.recap`. Call get_accounts (use the tiktok account, currently id 372, @courtside.edge.app), get_tiktok_creator_info (must show can_post true), upload_media with source "url" = the raw mp4 URL (filename recap_DATE.mp4, alt_text a one-line description, folder "recaps"), then schedule_post with when "now", account_ids [id], media_ids [media_id], content = the contents of recap_DATE.txt exactly, platform_options [{account_id, options:{privacy_level:"PUBLIC_TO_EVERYONE", allow_comment:true, allow_duet:false, allow_stitch:false}}]. Wait ~60 s, then get_post must show status published; retry_post once if it failed. Do not add a TikTok sound; the video already has its own beat.
+10. Update ledger.json: append DATE to `instagram.recap`; append DATE to `tiktok.recap` (create the key if missing) with the ScheduleNChill post id. Commit and push.
+11. Finish with ONE short message for the owner: the record (e.g. "3-0, season 46-23"), Instagram media id, TikTok post id and status. If anything failed, say exactly what (a failed TikTok step must not block or undo the Instagram post).
