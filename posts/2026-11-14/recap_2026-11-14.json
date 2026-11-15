@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-14",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Norman Powell",
+   "market": "PTS",
+   "side": "UNDER",
+   "line": 21.5,
+   "final": 24,
+   "mins": 30,
+   "usual": 29,
+   "hit": false,
+   "team": "CHI"
+  },
+  {
+   "name": "Aaron Gordon",
+   "market": "AST",
+   "side": "UNDER",
+   "line": 2.5,
+   "final": 1,
+   "mins": 33,
+   "usual": 29,
+   "hit": true,
+   "team": "DEN"
+  },
+  {
+   "name": "Nikola Jokic",
+   "market": "3PM",
+   "side": "UNDER",
+   "line": 1.5,
+   "final": 1,
+   "mins": 37,
+   "usual": 36,
+   "hit": true,
+   "team": "DEN"
+  }
+ ],
+ "season": [
+  48,
+  24
+ ],
+ "week": [
+  18,
+  3
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 254,
+  "diff": 25.5,
+  "dirn": "over",
+  "line": 228.5,
+  "winner": [
+   "MIA",
+   137
+  ],
+  "loser": [
+   "DET",
+   117
+  ],
+  "game": "DET @ MIA"
+ }
+}
