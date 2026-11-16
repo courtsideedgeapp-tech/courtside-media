@@ -1,19 +1,37 @@
 {
-  "instagram": {
-    "recap": [
-      "2026-11-13",
-      "2026-11-14"
-    ],
-    "week_review": [
-      "2026-11-13",
-      "2026-11-14"
-    ],
-    "blowout_report": [
-      "2026-11-13"
-    ]
-  },
-  "tiktok_ready": {
-    "2026-11-13": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-13/recap_2026-11-13.mp4",
-    "2026-11-14": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-14/recap_2026-11-14.mp4"
+ "instagram": {
+  "recap": [
+   "2026-11-13",
+   "2026-11-14",
+   "2026-11-15"
+  ],
+  "week_review": [
+   "2026-11-13",
+   "2026-11-14"
+  ],
+  "blowout_report": [
+   "2026-11-13"
+  ]
+ },
+ "tiktok_ready": {
+  "2026-11-13": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-13/recap_2026-11-13.mp4",
+  "2026-11-14": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-14/recap_2026-11-14.mp4"
+ },
+ "tiktok": {
+  "recap": [
+   "2026-11-15"
+  ]
+ },
+ "youtube": {
+  "recap": [
+   "2026-11-15"
+  ]
+ },
+ "ids": {
+  "2026-11-15": {
+   "instagram": "18102266093556687",
+   "tiktok_post": 6156,
+   "youtube_post": 6157
   }
+ }
 }
