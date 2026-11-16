@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-15",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Tyler Herro",
+   "market": "PTS + REB",
+   "side": "UNDER",
+   "line": 27.5,
+   "final": 10,
+   "mins": 20,
+   "usual": 31,
+   "hit": true,
+   "team": "MIL"
+  },
+  {
+   "name": "Kyshawn George",
+   "market": "PTS + REB",
+   "side": "OVER",
+   "line": 17.5,
+   "final": 13,
+   "mins": 30,
+   "usual": 33,
+   "hit": false,
+   "team": "WAS"
+  },
+  {
+   "name": "Matisse Thybulle",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 6.5,
+   "final": 12,
+   "mins": 26,
+   "usual": 24,
+   "hit": true,
+   "team": "LAL"
+  }
+ ],
+ "season": [
+  50,
+  25
+ ],
+ "week": [
+  18,
+  3
+ ],
+ "insight": {
+  "kind": "blowout",
+  "margin": 37,
+  "winner": [
+   "BOS",
+   131
+  ],
+  "loser": [
+   "DAL",
+   94
+  ],
+  "player": "Devin Carter",
+  "mins": 12,
+  "usual": 25,
+  "game": "DAL @ BOS"
+ }
+}
