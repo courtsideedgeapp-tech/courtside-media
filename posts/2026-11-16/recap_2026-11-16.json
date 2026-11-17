@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-16",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Patrick Williams",
+   "market": "PTS + REB",
+   "side": "OVER",
+   "line": 10.5,
+   "final": 0,
+   "mins": 13,
+   "usual": 25,
+   "hit": false,
+   "team": "CHI"
+  },
+  {
+   "name": "Tristan da Silva",
+   "market": "PTS + REB",
+   "side": "OVER",
+   "line": 15.5,
+   "final": 19,
+   "mins": 31,
+   "usual": 31,
+   "hit": true,
+   "team": "ORL"
+  },
+  {
+   "name": "Yves Missi",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 5.5,
+   "final": 6,
+   "mins": 23,
+   "usual": 21,
+   "hit": true,
+   "team": "NOP"
+  }
+ ],
+ "season": [
+  52,
+  26
+ ],
+ "week": [
+  17,
+  4
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 256,
+  "diff": 23.5,
+  "dirn": "over",
+  "line": 232.5,
+  "winner": [
+   "MEM",
+   136
+  ],
+  "loser": [
+   "WAS",
+   120
+  ],
+  "game": "MEM @ WAS"
+ }
+}
