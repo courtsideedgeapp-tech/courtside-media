@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-17",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Rui Hachimura",
+   "market": "REB",
+   "side": "UNDER",
+   "line": 5.5,
+   "final": 5,
+   "mins": 27,
+   "usual": 29,
+   "hit": true,
+   "team": "LAC"
+  },
+  {
+   "name": "Jrue Holiday",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 19.5,
+   "final": 29,
+   "mins": 31,
+   "usual": 26,
+   "hit": false,
+   "team": "POR"
+  },
+  {
+   "name": "Sion James",
+   "market": "AST",
+   "side": "OVER",
+   "line": 2.5,
+   "final": 4,
+   "mins": 30,
+   "usual": 27,
+   "hit": true,
+   "team": "CHA"
+  }
+ ],
+ "season": [
+  54,
+  27
+ ],
+ "week": [
+  16,
+  5
+ ],
+ "insight": {
+  "kind": "blowout",
+  "margin": 25,
+  "winner": [
+   "UTA",
+   132
+  ],
+  "loser": [
+   "LAC",
+   107
+  ],
+  "player": "Ace Bailey",
+  "mins": 23,
+  "usual": 31,
+  "game": "UTA @ LAC"
+ }
+}
