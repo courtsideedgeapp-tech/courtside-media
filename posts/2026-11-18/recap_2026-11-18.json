@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-18",
+ "hits": 1,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Anthony Davis",
+   "market": "REB + AST",
+   "side": "UNDER",
+   "line": 13.5,
+   "final": 16,
+   "mins": 34,
+   "usual": 34,
+   "hit": false,
+   "team": "WAS"
+  },
+  {
+   "name": "Darryn Peterson",
+   "market": "PTS + REB + AST",
+   "side": "UNDER",
+   "line": 28.5,
+   "final": 15,
+   "mins": 19,
+   "usual": 31,
+   "hit": true,
+   "team": "UTA"
+  },
+  {
+   "name": "Ja'Kobe Walter",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 17.5,
+   "final": 24,
+   "mins": 38,
+   "usual": 31,
+   "hit": false,
+   "team": "TOR"
+  }
+ ],
+ "season": [
+  55,
+  29
+ ],
+ "week": [
+  14,
+  7
+ ],
+ "insight": {
+  "kind": "blowout",
+  "margin": 30,
+  "winner": [
+   "CHI",
+   137
+  ],
+  "loser": [
+   "BKN",
+   107
+  ],
+  "player": "Keon Ellis",
+  "mins": 6,
+  "usual": 21,
+  "game": "CHI @ BKN"
+ }
+}
