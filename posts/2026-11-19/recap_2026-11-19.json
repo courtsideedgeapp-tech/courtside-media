@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-19",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Nate Ament",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 6.5,
+   "final": 18,
+   "mins": 35,
+   "usual": 18,
+   "hit": true,
+   "team": "MIL"
+  },
+  {
+   "name": "Sidy Cissoko",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 11.5,
+   "final": 16,
+   "mins": 31,
+   "usual": 23,
+   "hit": false,
+   "team": "POR"
+  },
+  {
+   "name": "Derrick Jones Jr.",
+   "market": "REB + AST",
+   "side": "UNDER",
+   "line": 5.5,
+   "final": 3,
+   "mins": 27,
+   "usual": 29,
+   "hit": true,
+   "team": "LAC"
+  }
+ ],
+ "season": [
+  57,
+  30
+ ],
+ "week": [
+  14,
+  7
+ ],
+ "insight": {
+  "kind": "blowout",
+  "margin": 28,
+  "winner": [
+   "MEM",
+   126
+  ],
+  "loser": [
+   "GSW",
+   98
+  ],
+  "player": "Jerami Grant",
+  "mins": 5,
+  "usual": 23,
+  "game": "GSW @ MEM"
+ }
+}
