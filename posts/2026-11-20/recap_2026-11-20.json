@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-20",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Wendell Carter Jr.",
+   "market": "REB",
+   "side": "UNDER",
+   "line": 8.5,
+   "final": 8,
+   "mins": 35,
+   "usual": 32,
+   "hit": true,
+   "team": "ORL"
+  },
+  {
+   "name": "Ace Bailey",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 17.5,
+   "final": 8,
+   "mins": 24,
+   "usual": 30,
+   "hit": true,
+   "team": "UTA"
+  },
+  {
+   "name": "Tristan da Silva",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 11.5,
+   "final": 6,
+   "mins": 24,
+   "usual": 30,
+   "hit": false,
+   "team": "ORL"
+  }
+ ],
+ "season": [
+  59,
+  31
+ ],
+ "week": [
+  13,
+  8
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 192,
+  "diff": 45.5,
+  "dirn": "under",
+  "line": 237.5,
+  "winner": [
+   "WAS",
+   98
+  ],
+  "loser": [
+   "CHI",
+   94
+  ],
+  "game": "WAS @ CHI"
+ }
+}
