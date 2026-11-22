@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-21",
+ "hits": 2,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Darius Garland",
+   "market": "REB + AST",
+   "side": "UNDER",
+   "line": 10.5,
+   "final": 3,
+   "mins": 32,
+   "usual": 33,
+   "hit": true,
+   "team": "LAC"
+  },
+  {
+   "name": "Naji Marshall",
+   "market": "REB",
+   "side": "UNDER",
+   "line": 4.5,
+   "final": 3,
+   "mins": 14,
+   "usual": 25,
+   "hit": true,
+   "team": "DAL"
+  },
+  {
+   "name": "Donovan Clingan",
+   "market": "PTS",
+   "side": "UNDER",
+   "line": 11.5,
+   "final": 22,
+   "mins": 31,
+   "usual": 26,
+   "hit": false,
+   "team": "POR"
+  }
+ ],
+ "season": [
+  61,
+  32
+ ],
+ "week": [
+  13,
+  8
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 261,
+  "diff": 29.5,
+  "dirn": "over",
+  "line": 231.5,
+  "winner": [
+   "PHI",
+   132
+  ],
+  "loser": [
+   "MIL",
+   129
+  ],
+  "game": "MIL @ PHI"
+ }
+}
