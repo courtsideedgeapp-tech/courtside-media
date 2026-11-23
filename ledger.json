@@ -1,78 +1,84 @@
 {
-  "instagram": {
-    "recap": [
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21"
-    ],
-    "week_review": [
-      "2026-11-13",
-      "2026-11-14",
-      "2026-11-21"
-    ],
-    "blowout_report": [
-      "2026-11-13",
-      "2026-11-20"
-    ]
+ "instagram": {
+  "recap": [
+   "2026-11-13",
+   "2026-11-14",
+   "2026-11-15",
+   "2026-11-16",
+   "2026-11-17",
+   "2026-11-18",
+   "2026-11-19",
+   "2026-11-20",
+   "2026-11-21",
+   "2026-11-22"
+  ],
+  "week_review": [
+   "2026-11-13",
+   "2026-11-14",
+   "2026-11-21"
+  ],
+  "blowout_report": [
+   "2026-11-13",
+   "2026-11-20"
+  ]
+ },
+ "tiktok_ready": {
+  "2026-11-13": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-13/recap_2026-11-13.mp4",
+  "2026-11-14": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-14/recap_2026-11-14.mp4"
+ },
+ "tiktok": {
+  "recap": [
+   "2026-11-15",
+   "2026-11-16",
+   "2026-11-17",
+   "2026-11-18",
+   "2026-11-19",
+   "2026-11-20",
+   "2026-11-21",
+   "2026-11-22"
+  ]
+ },
+ "youtube": {
+  "recap": [
+   "2026-11-15"
+  ]
+ },
+ "ids": {
+  "2026-11-15": {
+   "instagram": "18102266093556687",
+   "tiktok_post": 6156,
+   "youtube_post": 6157
   },
-  "tiktok_ready": {
-    "2026-11-13": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-13/recap_2026-11-13.mp4",
-    "2026-11-14": "https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/posts/2026-11-14/recap_2026-11-14.mp4"
+  "2026-11-16": {
+   "instagram": "18187588426424841",
+   "tiktok_post": 6225
   },
-  "tiktok": {
-    "recap": [
-      "2026-11-15",
-      "2026-11-16",
-      "2026-11-17",
-      "2026-11-18",
-      "2026-11-19",
-      "2026-11-20",
-      "2026-11-21"
-    ]
+  "2026-11-17": {
+   "instagram": "17926723434445568",
+   "tiktok_post": 6375
   },
-  "youtube": {
-    "recap": [
-      "2026-11-15"
-    ]
+  "2026-11-18": {
+   "instagram": "17897288319683653",
+   "tiktok_post": 6564
   },
-  "ids": {
-    "2026-11-15": {
-      "instagram": "18102266093556687",
-      "tiktok_post": 6156,
-      "youtube_post": 6157
-    },
-    "2026-11-16": {
-      "instagram": "18187588426424841",
-      "tiktok_post": 6225
-    },
-    "2026-11-17": {
-      "instagram": "17926723434445568",
-      "tiktok_post": 6375
-    },
-    "2026-11-18": {
-      "instagram": "17897288319683653",
-      "tiktok_post": 6564
-    },
-    "2026-11-19": {
-      "instagram": "17998190414843690",
-      "tiktok_post": 7064
-    },
-    "2026-11-20": {
-      "instagram": "18194311621361187",
-      "tiktok_post": 7405
-    },
-    "blowout_report_2026-11-20": {
-      "instagram": "18028889510875771"
-    },
-    "2026-11-21": {
-      "instagram": "18033622817857761",
-      "tiktok_post": 7619
-    }
+  "2026-11-19": {
+   "instagram": "17998190414843690",
+   "tiktok_post": 7064
+  },
+  "2026-11-20": {
+   "instagram": "18194311621361187",
+   "tiktok_post": 7405
+  },
+  "blowout_report_2026-11-20": {
+   "instagram": "18028889510875771"
+  },
+  "2026-11-21": {
+   "instagram": "18033622817857761",
+   "tiktok_post": 7619
+  },
+  "2026-11-22": {
+   "instagram": "17934671661161685",
+   "tiktok_post": 7780
   }
+ }
 }
