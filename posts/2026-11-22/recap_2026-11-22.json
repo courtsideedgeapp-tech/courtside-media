@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-22",
+ "hits": 3,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Keyonte George",
+   "market": "REB + AST",
+   "side": "UNDER",
+   "line": 12.5,
+   "final": 12,
+   "mins": 26,
+   "usual": 34,
+   "hit": true,
+   "team": "UTA"
+  },
+  {
+   "name": "Cooper Flagg",
+   "market": "PTS + AST",
+   "side": "UNDER",
+   "line": 32.5,
+   "final": 32,
+   "mins": 31,
+   "usual": 34,
+   "hit": true,
+   "team": "DAL"
+  },
+  {
+   "name": "Tristan da Silva",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 10.5,
+   "final": 18,
+   "mins": 27,
+   "usual": 30,
+   "hit": true,
+   "team": "ORL"
+  }
+ ],
+ "season": [
+  64,
+  32
+ ],
+ "week": [
+  14,
+  7
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 204,
+  "diff": 20.5,
+  "dirn": "under",
+  "line": 224.5,
+  "winner": [
+   "ATL",
+   107
+  ],
+  "loser": [
+   "DET",
+   97
+  ],
+  "game": "DET @ ATL"
+ }
+}
