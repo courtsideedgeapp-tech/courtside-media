@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-23",
+ "hits": 3,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Mikel Brown Jr.",
+   "market": "PTS + AST",
+   "side": "OVER",
+   "line": 16.5,
+   "final": 24,
+   "mins": 29,
+   "usual": 23,
+   "hit": true,
+   "team": "BKN"
+  },
+  {
+   "name": "Donovan Mitchell",
+   "market": "PTS + REB + AST",
+   "side": "OVER",
+   "line": 35.5,
+   "final": 36,
+   "mins": 37,
+   "usual": 33,
+   "hit": true,
+   "team": "CLE"
+  },
+  {
+   "name": "Keyonte George",
+   "market": "PTS + REB",
+   "side": "UNDER",
+   "line": 26.5,
+   "final": 18,
+   "mins": 33,
+   "usual": 33,
+   "hit": true,
+   "team": "UTA"
+  }
+ ],
+ "season": [
+  67,
+  32
+ ],
+ "week": [
+  15,
+  6
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 245,
+  "diff": 18.5,
+  "dirn": "over",
+  "line": 226.5,
+  "winner": [
+   "IND",
+   125
+  ],
+  "loser": [
+   "OKC",
+   120
+  ],
+  "game": "OKC @ IND"
+ }
+}
