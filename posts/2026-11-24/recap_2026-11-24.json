@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-24",
+ "hits": 1,
+ "n": 2,
+ "picks": [
+  {
+   "name": "Trae Young",
+   "market": "PTS",
+   "side": "UNDER",
+   "line": 15.5,
+   "final": 17,
+   "mins": 35,
+   "usual": 35,
+   "hit": false,
+   "team": "WAS"
+  },
+  {
+   "name": "P.J. Washington",
+   "market": "PTS + REB",
+   "side": "OVER",
+   "line": 16.5,
+   "final": 20,
+   "mins": 25,
+   "usual": 31,
+   "hit": true,
+   "team": "DAL"
+  }
+ ],
+ "season": [
+  68,
+  33
+ ],
+ "week": [
+  14,
+  6
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 190,
+  "diff": 22.5,
+  "dirn": "under",
+  "line": 212.5,
+  "winner": [
+   "DET",
+   104
+  ],
+  "loser": [
+   "ORL",
+   86
+  ],
+  "game": "DET @ ORL"
+ }
+}
