@@ -1,0 +1,64 @@
+{
+ "date": "2026-11-25",
+ "hits": 1,
+ "n": 3,
+ "picks": [
+  {
+   "name": "Sion James",
+   "market": "PTS",
+   "side": "OVER",
+   "line": 5.5,
+   "final": 5,
+   "mins": 26,
+   "usual": 27,
+   "hit": false,
+   "team": "CHA"
+  },
+  {
+   "name": "Miles Bridges",
+   "market": "PTS + REB",
+   "side": "OVER",
+   "line": 18.5,
+   "final": 10,
+   "mins": 25,
+   "usual": 29,
+   "hit": false,
+   "team": "PHX"
+  },
+  {
+   "name": "Davion Mitchell",
+   "market": "PTS + AST",
+   "side": "OVER",
+   "line": 22.5,
+   "final": 30,
+   "mins": 40,
+   "usual": 35,
+   "hit": true,
+   "team": "MIA"
+  }
+ ],
+ "season": [
+  69,
+  35
+ ],
+ "week": [
+  14,
+  6
+ ],
+ "insight": {
+  "kind": "total",
+  "total": 215,
+  "diff": 22.5,
+  "dirn": "under",
+  "line": 237.5,
+  "winner": [
+   "PHI",
+   111
+  ],
+  "loser": [
+   "MIA",
+   104
+  ],
+  "game": "MIA @ PHI"
+ }
+}
