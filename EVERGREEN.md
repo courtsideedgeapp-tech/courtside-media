@@ -46,3 +46,6 @@ Examples must be about things our audience already cares about. A fringe starter
 Myths: rest days mean a star sits; home court boosts every stat; back-to-backs always hurt; last game predicts the next; season average is the truth; a big game total lifts everyone; revenge games; starters always play 30+; a hot shooter stays hot; one big game changes a role.
 How-to: read a box score in 10 seconds; role beats raw numbers; pace and game totals; variance (why one game proves nothing); foul trouble; garbage time; usage vs minutes; sample size; home/away splits; what a minutes restriction does.
 Stat of the week: the biggest minutes drop in a blowout; the closest total vs its line; the week's most surprising result (hit or miss), explained with the minutes or game script.
+
+## Thumbnail rule (frame 0 is the TikTok thumbnail)
+TikTok has no cover option via ScheduleNChill, so frame 0 IS the thumbnail. The hook slide must name the star and the number (e.g. "WEMBANYAMA / PLAYED 21 MIN"), never a generic headline alone.
