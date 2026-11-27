@@ -1,0 +1,42 @@
+{
+ "id": "stat_star_minutes",
+ "series": "STAT OF THE WEEK",
+ "endsub": "Comment INVITE for early access.",
+ "slides": [
+  {
+   "kind": "hook",
+   "dur": 3.4,
+   "lines": [
+    "38-POINT",
+    "BLOWOUT"
+   ],
+   "colors": [
+    "GOLD",
+    "INK"
+   ],
+   "size": 200,
+   "sub": "Even stars sit when it's decided"
+  },
+  {
+   "kind": "stat",
+   "dur": 5.4,
+   "kick": "NOV 13  -  SAS 123, GSW 85",
+   "name": "VICTOR WEMBANYAMA",
+   "big": "21 MIN",
+   "bigsub": "usually plays 30",
+   "lines": [
+    "9 minutes below his average"
+   ]
+  },
+  {
+   "kind": "text",
+   "dur": 3.4,
+   "head": "THE TAKEAWAY",
+   "lines": [
+    "Check the game script,",
+    "not just the average."
+   ]
+  }
+ ],
+ "caption": "🏀 STAT OF THE WEEK: a 38-point blowout, and even Wemby sat! 📉\n\nVictor Wembanyama usually plays 30 minutes. On Nov 13, SAS beat GSW 123-85, and he logged just 21. ⏱️ When a game is decided early, even the biggest stars get the 4th quarter off. Averages don't see that coming!\n\nThe takeaway: check the game script, not just the average. 🧠\n\n🔑 Invite-only beta (free app): comment INVITE and we'll send you one.\n\nWhich star's minutes have surprised you most? 👇\n\nResearch, not betting advice. Do the homework! 📊\n\n#NBA #NBAStats #BasketballAnalytics #CourtsideEdge #LearnBasketball #StatOfTheWeek #Wembanyama"
+}
