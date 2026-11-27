@@ -10,11 +10,20 @@ from PIL import Image, ImageDraw, ImageFont, ImageFilter
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 W, H, FPS = 1080, 1920, 30
-DUR = 19.0
+DUR = 12.0
 N = int(DUR * FPS)
 
 MKT = {"pts": "PTS", "reb": "REB", "ast": "AST", "fg3m": "3PM", "pa": "PTS + AST", "ra": "REB + AST",
        "pr": "PTS + REB", "pra": "PTS + REB + AST", "stl": "STL", "blk": "BLK"}
+
+def _stars():
+    try: return set(json.load(open(os.path.join(HERE, "..", "evergreen", "stars.json")))["players"])
+    except Exception: return set()
+
+def variant_for(date):
+    # 3-way hook test, rotates daily: 0 = star name, 1 = surprising number, 2 = invite-only scarcity
+    import datetime
+    return datetime.date.fromisoformat(date).toordinal() % 3
 
 # ---------------------------------------------------------------- data
 def load_facts(rec_path, date=None):
@@ -92,6 +101,7 @@ def caption(f):
         lines.append(f"\n💥 Story of the night: {ins['winner'][0]} {ins['winner'][1]}, {ins['loser'][0]} {ins['loser'][1]}. "
                      f"{ins['player']} played {ins['mins']} min (usually {ins['usual']}). Blowouts steal minutes!")
     lines.append(f"\n📈 Season Heat Check: {sh}-{sm} ({pct}%)")
+    lines.append("🔑 Invite-only beta (free app): comment INVITE and we'll send you one.")
     lines.append("Every morning we break down the NBA stats and trends behind the numbers 🧠")
     lines.append("Research, not betting advice. Do the homework! 👇\nWhich result surprised you most?")
     lines.append("\n#NBA #NBAStats #BasketballAnalytics #HeatCheck #CourtsideEdge #NBAHighlights")
@@ -158,31 +168,41 @@ def fit(name, s, maxw, start=62, lo=34):
         if f.getlength(s) <= maxw: return f
     return font(name, lo)
 
+def hits_key(h, n): return h
+
 def render(facts, out_silent):
     BGI = make_bg(); LOGO_SMALL = logo_at(170)
     picks = facts["picks"]; hits, n = facts["hits"], facts["n"]; sh, sm = facts["season"]
     ins = facts["insight"]; pct = round(1000 * sh / max(1, sh + sm)) / 10
     big = f"{hits}-{n - hits}"
     sub = {3: "CLEAN SWEEP", 2: "SOLID NIGHT", 1: "TOUGH ONE", 0: "ROUGH NIGHT"}.get(hits, "") if n == 3 else "THE RESULTS"
+    var = variant_for(facts["date"]); stars = _stars()
+    star = next((p for p in picks if p["name"] in stars), picks[0])
+    if var == 0:
+        head = f"{star['name'].upper()}: {star['final']} {star['market']}"; head_f = fit("BSD800", head, W - 120, start=84, lo=44); sub = "LAST NIGHT'S HEAT CHECK"
+    elif var == 1:
+        head = f"WE WENT {big} LAST NIGHT"; head_f = fit("BSD800", head, W - 120, start=84, lo=44)
+    else:
+        head = "INVITE-ONLY BETA"; head_f = F_HOOK; sub = f"WHAT MEMBERS SAW LAST NIGHT"
     big_col = GOLD if hits * 2 >= n else MUTED
     card_h, gap = 250, 50
     def frame(i):
         t = i / FPS
         img = BGI.copy(); ov = Image.new("RGBA", (W, H), (0, 0, 0, 0)); d = ImageDraw.Draw(ov)
-        paste_logo(img, LOGO_SMALL, W // 2, 235, vis(t, 0, 16.6, 0.3, 0.35))
-        text_c(d, 1700, "Research, not betting advice.", F_SMALL, MUTED, 0.9 * vis(t, 0, 19.0, 0.3, 0.25))
-        a = vis(t, 0.0, 3.4); k = ease_back(t / 0.7)
-        text_c(d, 420, "LAST NIGHT'S HEAT CHECK", F_HOOK, INK, a, dy=70 * (1 - k), sp=3)
+        paste_logo(img, LOGO_SMALL, W // 2, 235, vis(t, 0, 9.8, 0.3, 0.3))
+        text_c(d, 1700, "Research, not betting advice.", F_SMALL, MUTED, 0.9 * vis(t, 0, DUR, 0.3, 0.25))
+        a = vis(t, 0.0, 2.6); k = ease_back(t / 0.7)
+        text_c(d, 420, head, head_f, INK, a, dy=70 * (1 - k), sp=3)
         k2 = ease_back((t - 0.15) / 0.7)
         text_c(d, 560, big, F_BIG, big_col, a, dy=90 * (1 - k2))
         ln = ease((t - 0.5) / 0.7)
         if a > 0: d.rectangle([W / 2 - 220 * ln, 1195, W / 2 + 220 * ln, 1200], fill=OR + (int(255 * a),))
         text_c(d, 1235, sub, F_SUB, MUTED, a, sp=8)
-        ab = vis(t, 3.4, 11.6, fin=0.4, fout=0.4)
+        ab = vis(t, 2.6, 7.8, fin=0.3, fout=0.3)
         if ab > 0:
             text_c(d, 380, "THE RESULTS", F_SUB, MUTED, ab, sp=8)
             for k_, p in enumerate(picks[:3]):
-                t0 = 4.0 + k_ * 2.3; ar = ab * ease((t - t0) / 0.5)
+                t0 = 3.0 + k_ * 1.3; ar = ab * ease((t - t0) / 0.5)
                 if ar <= 0: continue
                 y = 480 + k_ * (card_h + gap) + 40 * (1 - ease((t - t0) / 0.5)); col = GREEN if p["hit"] else RED
                 d.rounded_rectangle([60, y, W - 60, y + card_h], radius=22, fill=PANEL + (int(255 * ar),), outline=LINE + (int(255 * ar),), width=2)
@@ -197,7 +217,7 @@ def render(facts, out_silent):
                     lab = "HIT" if p["hit"] else "MISS"
                     d.rounded_rectangle([W - 290, y + 78, W - 100, y + 172], radius=14, fill=col + (int(255 * ah),))
                     bw = tw(d, lab, F_BADGE, 4); draw_sp(d, W - 195 - bw / 2, y + 101, lab, F_BADGE, BG, ah, 4)
-        a = vis(t, 11.6, 15.2)
+        a = vis(t, 7.8, 9.8)
         if a > 0 and not ins:
             wh, wm = facts["week"]
             text_c(d, 470, "LAST 7 DAYS", F_SUB, MUTED, a, sp=8)
@@ -219,14 +239,13 @@ def render(facts, out_silent):
                 text_c(d, 790, f"{ins['total']} total points.", F_MEAN, INK, a)
                 text_c(d, 880, f"{ins['diff']:g} {ins['dirn']} the {ins['line']:g} line.", F_MEAN, INK, a)
                 text_c(d, 1030, "Pace and scoring swings matter.", F_SMALL, MUTED, a)
-        a = vis(t, 15.2, 16.9)
-        text_c(d, 470, "SEASON HEAT CHECK RECORD", F_SUB, MUTED, a, sp=4)
-        text_c(d, 560, f"{sh}-{sm}", F_REC, GOLD, a, dy=30 * (1 - ease((t - 15.2) / 0.5)))
-        text_c(d, 960, f"{pct:g}% HIT RATE", F_MEAN, INK, a, sp=2)
-        a = vis(t, 16.9, 19.0, fin=0.4, fout=0.25)
+        a = vis(t, 9.8, DUR, fin=0.35, fout=0.25)
         if a > 0:
-            s = 0.86 + 0.14 * ease_back((t - 16.9) / 0.6); paste_logo(img, logo_at(max(10, int(640 * s))), W // 2, 640, a)
-        text_c(d, 1010, "DO THE HOMEWORK.", F_END, INK, a, dy=20 * (1 - ease((t - 17.1) / 0.5)))
+            s_ = 0.88 + 0.12 * ease_back((t - 9.8) / 0.5); paste_logo(img, logo_at(max(10, int(300 * s_))), W // 2, 420, a)
+        text_c(d, 600, f"SEASON {sh}-{sm}  ({pct:g}%)", F_MEAN, MUTED, a)
+        text_c(d, 740, "INVITE-ONLY BETA", F_MEAN, INK, a, sp=4)
+        text_c(d, 860, "COMMENT", F_END, INK, a, dy=20 * (1 - ease((t - 10.0) / 0.4)))
+        text_c(d, 1000, "INVITE", font("BSD900", 330), GOLD, a, dy=30 * (1 - ease((t - 10.2) / 0.4)))
         img.alpha_composite(ov); return img.convert("RGB")
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out_silent]
@@ -274,6 +293,6 @@ if __name__ == "__main__":
     make_cover(final)
     open(os.path.join(outdir, f"recap_{d}.txt"), "w").write(caption(facts))
     json.dump(facts, open(os.path.join(outdir, f"recap_{d}.json"), "w"), indent=1)
-    fr(int(13 * FPS)).save(os.path.join(outdir, f"recap_{d}_insight.png"))
-    fr(int(8 * FPS)).save(os.path.join(outdir, f"recap_{d}_results.png"))
+    fr(int(8.5 * FPS)).save(os.path.join(outdir, f"recap_{d}_insight.png"))
+    fr(int(5 * FPS)).save(os.path.join(outdir, f"recap_{d}_results.png"))
     print("ok", final)

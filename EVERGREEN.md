@@ -30,6 +30,9 @@ Never name sportsbooks. Results-only, framed as research, never advice. No tonig
 6. Set status posted, media_id, tiktok_post_id and youtube_post_id, commit, push.
 7. Finish with ONE short message: title, Instagram media id, TikTok and YouTube post ids and status.
 
+## Invite call to action (all evergreen videos)
+The app is invite-only; signup is by comment. Every spec sets `"endsub": "Comment INVITE for early access."` and every caption includes the line `🔑 Invite-only beta (free app): comment INVITE and we'll send you one.` just before the Research disclaimer. Keep videos under ~12 seconds; open with the star or the surprising number in the first second.
+
 ## Relevance rule (READ BEFORE PICKING ANY EXAMPLE)
 Examples must be about things our audience already cares about. A fringe starter (e.g. Julian Reese) is NOT interesting even if his minutes drop is the biggest in the data. Never rank by "biggest drop" alone.
 - Only NAME a player who is in `evergreen/stars.json`, or who was a Heat Check / top-pick subject 3+ times in the last 14 days of record.json. Anyone else: skip the example.
