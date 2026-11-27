@@ -246,6 +246,7 @@ def render(facts, out_silent):
         text_c(d, 740, "INVITE-ONLY BETA", F_MEAN, INK, a, sp=4)
         text_c(d, 860, "COMMENT", F_END, INK, a, dy=20 * (1 - ease((t - 10.0) / 0.4)))
         text_c(d, 1000, "INVITE", font("BSD900", 330), GOLD, a, dy=30 * (1 - ease((t - 10.2) / 0.4)))
+        text_c(d, 1440, "DO THE HOMEWORK.", F_HOOK, INK, a * ease((t - 10.6) / 0.4), sp=3)
         img.alpha_composite(ov); return img.convert("RGB")
     cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
            "-c:v", "libx264", "-preset", "veryfast", "-crf", "17", "-pix_fmt", "yuv420p", "-movflags", "+faststart", out_silent]
