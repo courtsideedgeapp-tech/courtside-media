@@ -38,6 +38,19 @@
    "media_id": "17902018704395051",
    "tiktok_post_id": 8865,
    "youtube_post_id": null
+  },
+  {
+   "date": "2026-11-27",
+   "id": "stat_star_minutes",
+   "title": "Stat of the week: Wembanyama minutes in a 38-pt blowout",
+   "type": "stat",
+   "mp4": "evergreen/stat_star_minutes.mp4",
+   "cover": "evergreen/stat_star_minutes_cover.jpg",
+   "caption": "evergreen/stat_star_minutes.txt",
+   "status": "posted",
+   "media_id": "17960954859298673",
+   "tiktok_post_id": 8877,
+   "youtube_post_id": 8878
   }
  ],
  "topics_used": [
@@ -50,6 +63,7 @@
   "myth_hot_streak",
   "myth_starters_30",
   "howto_variance",
-  "stat_minutes_drop_week"
+  "stat_minutes_drop_week",
+  "stat_star_minutes"
  ]
 }
