@@ -15,7 +15,7 @@ Never name sportsbooks. Results-only, framed as research, never advice. No tonig
 2. Read `evergreen/queue.json`. Count items with status pending dated today or later. If 3 or more, stop with "queue full".
 3. Slots: the next Mon/Wed/Fri dates (America/Toronto) strictly after the latest date already in the queue and after 2026-11-22; fill until 3 pending exist.
 4. For each slot pick the type in rotation (look at the last items): myth, howto, stat. Pick a topic NOT in `topics_used` (bank below; add your own in the same spirit).
-5. Ground every video in a REAL example from record.json when the topic allows it (a final-score blowout and a starter's minutes, a total vs its line, a Heat Check result). Re-check every number against the record before using it. Never use data about games not yet played. A pure concept video is fine when no real example fits, but never invent a number.
+5. Ground every video in a REAL, RECOGNIZABLE example (see Relevance rule) from record.json when the topic allows it (a final-score blowout and a starter's minutes, a total vs its line, a Heat Check result). Re-check every number against the record before using it. Never use data about games not yet played. A pure concept video is fine when no real example fits, but never invent a number.
 6. Write a spec JSON `evergreen/<id>.json` and render: `python3 -I studio/series.py spec evergreen/<id>.json evergreen/<id>.mp4`. Slide kinds: hook (lines, colors, size, sub), text (head, lines max 4, foot), stat (kick, name, big, bigsub, lines), rows (kick, 3 rows of [title, sub, big, label]). Colors are names: GOLD, INK, RED, GREEN, OR, MUTED. Keep 3-4 slides, 14-20 seconds total. Hook = short punchy claim; last slide = THE TAKEAWAY. The renderer rejects banned terms and requires "Research, not betting advice" in the caption. Caption: emoji-filled, fun, SEO-friendly, a question at the end, 6-8 hashtags (#NBA #NBAStats #BasketballAnalytics #CourtsideEdge #LearnBasketball plus topic tags).
 7. Look at the cover jpg (Read tool) for overflow or clipping; fix the spec and rerun if needed.
 8. Add the items to the queue (status pending), append topic ids to topics_used, commit (all files) and `git push origin HEAD:main`. Verify each mp4 and cover returns 200 at https://raw.githubusercontent.com/courtsideedgeapp-tech/courtside-media/main/evergreen/<file>.
@@ -29,6 +29,15 @@ Never name sportsbooks. Results-only, framed as research, never advice. No tonig
 5. YouTube Short via ScheduleNChill: account = the youtube one from get_accounts (currently id 373). Reuse the media_id from step 4. schedule_post when "now", content = the .txt caption + a final line `#Shorts`, options {title: item title or caption first line (max 100 chars), tags:["NBA","NBAStats","LearnBasketball","CourtsideEdge","Shorts"], privacy:"public", category:"27", made_for_kids:"no", altered_content:"no"}. get_post after ~60 s must show published; retry_post once. A YouTube failure must not undo the other posts.
 6. Set status posted, media_id, tiktok_post_id and youtube_post_id, commit, push.
 7. Finish with ONE short message: title, Instagram media id, TikTok and YouTube post ids and status.
+
+## Relevance rule (READ BEFORE PICKING ANY EXAMPLE)
+Examples must be about things our audience already cares about. A fringe starter (e.g. Julian Reese) is NOT interesting even if his minutes drop is the biggest in the data. Never rank by "biggest drop" alone.
+- Only NAME a player who is in `evergreen/stars.json`, or who was a Heat Check / top-pick subject 3+ times in the last 14 days of record.json. Anyone else: skip the example.
+- Prefer: stars and well-known starters, hyped rookies (Flagg, Harper, Boozer), marquee teams and primetime games, and stories fans will have already seen (a star sitting out a blowout 4th quarter, a huge total, a famous upset).
+- Rank candidates by name recognition first, then by size of the effect. Pick the best of the top 5, not the largest number.
+- If no recognizable example fits, use a team-level or game-level story (team scores, totals vs line, blowout margins) or a clean concept video. Never fall back to an obscure name.
+- Hook line must work without knowing the player: lead with the idea, then the star.
+- Before rendering, say in the spec comment why a fan would care. If you cannot, pick another example.
 
 ## Topic bank (pick unused; add more in the same spirit)
 Myths: rest days mean a star sits; home court boosts every stat; back-to-backs always hurt; last game predicts the next; season average is the truth; a big game total lifts everyone; revenge games; starters always play 30+; a hot shooter stays hot; one big game changes a role.
